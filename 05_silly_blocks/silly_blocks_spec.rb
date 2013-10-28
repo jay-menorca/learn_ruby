@@ -1,4 +1,4 @@
-require "silly_blocks"
+require "silly_blocks.rb"
 
 describe "some silly block functions" do
 
