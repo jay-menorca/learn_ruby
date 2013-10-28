@@ -1,4 +1,4 @@
-require 'book'
+require 'book.rb'
 
 describe Book do
 
