@@ -5,7 +5,27 @@ class Changer
 	NICKEL = 5
 	PENNY = 1
 
+	DENOM = [25,10,5,1]
+
+
 	def self.make_change(amount)
+		amtToChange = amount
+		changeArr = Array.new
+
+		while amtToChange > 0 
+			Changer::DENOM.each do |denomVal|
+				if amtToChange >= denomVal
+					changeArr << denomVal
+					amtToChange -= denomVal
+					break
+				end
+			end
+		end
+
+		return changeArr
+	end
+
+	def self.make_change2(amount)
 		amtToChange = amount
 		changeArr = Array.new
 
@@ -27,4 +47,6 @@ class Changer
 
 		return changeArr
 	end
+
+
 end
